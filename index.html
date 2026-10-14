@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AutoCAD × Inventor 參數化建模暨自動化機構設計班｜亮點班</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&family=M+PLUS+Rounded+1c:wght@500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#ECEAE5;--card:#F8F7F3;--ink:#2B2F33;--mute:#666B70;--line:#D0CCC4;--navy:#2B2F33;--blue:#3F6F8C;--cyan:#4E8A80;--org:#D25A22;--tint:#E3E8E9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) radial-gradient(rgba(43,47,51,.09) 1px,transparent 1px) 0 0/22px 22px;color:var(--ink);font:400 16px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+h1,h2,h3{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;font-weight:900;margin:0;line-height:1.25;letter-spacing:.01em}
+.sub{font-family:"M PLUS Rounded 1c","Noto Sans TC","PingFang TC",sans-serif;font-weight:700}
+.num{font-family:"Space Grotesk","Noto Sans TC",sans-serif;font-weight:700}
+a{color:inherit;text-decoration:none}
+.w{max-width:1160px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+nav b{font-weight:900;font-size:17px}nav b i{font-style:normal;color:var(--org)}
+nav .l{display:flex;gap:22px;font-size:14px;color:var(--mute)}
+@media(max-width:760px){nav .l{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:13px 24px;font-weight:700;border:2px solid transparent;cursor:pointer;font-family:"M PLUS Rounded 1c","Noto Sans TC",sans-serif;font-size:16px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.p{background:var(--ink);color:#F8F7F3;box-shadow:4px 4px 0 var(--org)}.g{border-color:var(--ink);color:var(--ink)}
+.hero{margin:20px auto 0;max-width:1120px;border-radius:28px;background-color:var(--card);border:2px solid var(--ink);box-shadow:8px 8px 0 #E0A526;color:var(--ink);position:relative;overflow:hidden;padding:56px 48px;display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;
+background-image:linear-gradient(rgba(63,111,140,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(63,111,140,.13) 1px,transparent 1px);background-size:36px 36px}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:#E8B64B;opacity:.9}
+.tag{display:inline-block;background:var(--org);color:#fff;border-radius:99px;padding:3px 16px;font-size:14px;margin-right:10px}
+.hero h1{font-size:clamp(34px,5.6vw,62px);margin:22px 0 14px}
+.hero h1 em{font-style:normal;color:var(--org)}
+.hero p{max-width:34em;color:var(--mute);margin:0 0 26px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.hero svg{width:100%;height:auto;position:relative;z-index:1}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:1120px;margin:14px auto 0;padding:0 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;border-bottom:4px solid var(--blue)}
+.kpi div:nth-child(2n){border-bottom-color:var(--org)}
+.kpi b{display:block;font-size:34px;line-height:1.1}.kpi span{color:var(--mute);font-size:14px}
+section{padding:72px 0 0}
+.hd{margin-bottom:28px;max-width:760px}
+.hd h2{font-size:clamp(26px,3.6vw,40px)}
+.hd p{color:var(--mute);margin:10px 0 0}
+.bar{display:block;width:56px;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--org),var(--blue));margin-bottom:14px}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.c{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.c h3{font-size:19px;margin-bottom:8px}
+.c p,.c li{color:var(--mute);font-size:15px;margin:0}
+.c ul{margin:0;padding-left:18px}
+.w1{border-top:5px solid var(--blue)}
+.w1 .q{display:inline-block;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:15px;color:#fff;background:var(--blue);border-radius:8px;padding:1px 10px;margin-bottom:10px}
+.w1:nth-child(2n) .q{background:var(--org)}.w1:nth-child(2n){border-top-color:var(--org)}
+.w1 h3{font-size:18px}
+.stat .num{font-size:44px;color:var(--blue);display:block;line-height:1.1}
+.stat:nth-child(2) .num{color:var(--org)}.stat:nth-child(3) .num{color:var(--cyan)}
+.stat small{display:block;margin-top:10px;font-size:12px;color:var(--mute)}
+.band{background:#E3DFD6;border:2px dashed var(--ink);color:var(--ink);border-radius:20px;padding:20px 26px;margin-top:16px;text-align:center}
+.band b{color:var(--org)}
+.stage{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start}
+.st-h{background:var(--tint);border-radius:14px;padding:14px;text-align:center}
+.st-h .num{font-size:30px;color:var(--blue);display:block;line-height:1.1}
+.st-h span{font-size:13px;color:var(--mute)}
+details{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 24px;margin-bottom:14px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;font-weight:900;font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;color:var(--org);line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details .stage{margin-top:16px}
+details li{color:var(--mute);font-size:15px}
+.tl{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;position:relative}
+.tl div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 10px;text-align:center;border-top:5px solid var(--blue)}
+.tl div:last-child{border-top-color:var(--org)}
+.tl b{display:block;font-size:15px}.tl span{font-size:13px;color:var(--mute)}
+.tl .num{display:block;font-size:15px;margin-bottom:4px}
+.jobs .c b{color:var(--blue);font-size:18px;display:block;margin-bottom:6px}
+.jobs .c:nth-child(2n) b{color:var(--org)}
+.jobs .c small{display:block;margin-top:10px;font-size:13px;color:var(--mute);border-top:1px dashed var(--line);padding-top:10px}
+.cta-box{background-color:#E5E0D4;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--org);color:var(--ink);border-radius:28px;padding:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;position:relative;overflow:hidden;
+background-image:linear-gradient(rgba(43,47,51,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(43,47,51,.08) 1px,transparent 1px);background-size:36px 36px}
+.cta-box h2{font-size:clamp(26px,3.6vw,40px)}
+.cta-box p{color:var(--mute)}
+.info{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;font-size:15px}
+.info div{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.info div:last-child{border:0}.info span{color:var(--mute);white-space:nowrap}.info b{text-align:right}
+footer{padding:36px 0 48px;color:var(--mute);font-size:12.5px;line-height:1.8}
+@media(max-width:900px){
+.hero{grid-template-columns:1fr;padding:36px 24px;margin:12px 12px 0}.hero svg{max-width:360px;margin:0 auto}
+.kpi{grid-template-columns:repeat(2,1fr);margin:14px 12px 0}
+.g3,.g4,.g2{grid-template-columns:1fr 1fr}.tl{grid-template-columns:repeat(2,1fr)}
+.cta-box{grid-template-columns:1fr;padding:32px 24px}}
+@media(max-width:600px){.g3,.g4,.g2{grid-template-columns:1fr}.stage{grid-template-columns:1fr}section{padding-top:56px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="w"><b>聯成電腦 <i>亮點班</i></b>
+<div class="l"><a href="#w5h1">5W1H</a><a href="#why">產業需求</a><a href="#how">學習路徑</a><a href="#job">就業出路</a><a href="#info">開課資訊</a></div>
+<a class="btn p" href="#enroll" style="padding:9px 18px;font-size:14px">預約諮詢</a></div></nav>
+
+<header class="hero">
+<div>
+<span class="tag">亮點班</span><span class="sub" style="font-size:14px;color:var(--mute)">聯成電腦 新竹認證中心｜iCAP AVA2173-003v5 職能對應</span>
+<h1>竹科缺的，<br>是會畫 <em>3D</em> 的你</h1>
+<p class="sub" style="font-size:19px;color:var(--ink);margin-bottom:10px">AutoCAD × Inventor 參數化建模暨自動化機構設計班</p>
+<p>153 小時、51 堂實作課。從零基礎一路練到 Inventor 工程圖，結訓帶著作品集，接軌企業徵才面試。</p>
+<div class="cta"><a class="btn p" href="#enroll">立即預約諮詢</a><a class="btn g" href="#how">看 3 階段學習路徑</a></div>
+</div>
+<svg viewBox="0 0 320 260" role="img" aria-label="機構零件工程圖示意">
+<g fill="none" stroke="#2B2F33" stroke-width="2.2" stroke-linejoin="round">
+<path d="M70 70h120l40 40v90H70z" fill="rgba(63,111,140,.28)"/>
+<circle cx="120" cy="130" r="28" fill="rgba(210,90,34,.18)"/><circle cx="120" cy="130" r="10"/>
+<circle cx="200" cy="170" r="12"/><circle cx="96" cy="96" r="6"/>
+<path d="M70 70l30-26h120l10 26M230 110l30-26M230 200l30-26v-90" stroke-opacity=".55"/></g>
+<g stroke="#D25A22" stroke-width="1.6" fill="none"><path d="M70 228h160M70 220v16M230 220v16"/><path d="M48 70v130M40 70h16M40 200h16"/><path d="M120 130h40" stroke-dasharray="5 4"/></g>
+<g fill="#D25A22" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700"><text x="122" y="222">160</text><text x="10" y="140" transform="rotate(-90 22 140)">130</text><text x="160" y="124">Ø56</text></g>
+</svg>
+</header>
+
+<div class="kpi" style="padding:0 12px"><div><b class="num">153</b><span>小時實務課綱</span></div><div><b class="num">51</b><span>堂，每堂 3 小時</span></div><div><b class="num">3</b><span>階段軟體進程</span></div><div><b class="num">800+</b><span>大新竹 3D CAD 相關職缺</span></div></div>
+
+<main class="w">
+<section id="w5h1">
+<div class="hd"><span class="bar"></span><h2>5W1H 一眼看懂這門課</h2><p>誰適合、學什麼、為什麼現在、何時開課、在哪上、怎麼學，六個問題先回答完。</p></div>
+<div class="grid g3">
+<div class="c w1"><span class="q">Who</span><h3>誰適合</h3><ul><li>零基礎、想轉職進科技製造業</li><li>機械、電機、工設相關科系畢業生</li><li>想強化 CAD／3D 建模的在職者</li><li>目標進入竹科設備、半導體產業</li></ul></div>
+<div class="c w1"><span class="q">What</span><h3>學什麼</h3><p>AutoCAD 2D 精密圖學 → AutoCAD 3D 實體建模 → Inventor 參數化設計與工程圖，最後加上 9 小時 AutoCAD 證照輔考。</p></div>
+<div class="c w1"><span class="q">Why</span><h3>為什麼現在學</h3><p>設備產業擴張、製圖與機構人才供不應求。企業缺的是「會用工具、看得懂圖、做得出模型」的即戰力，非本科也有機會。</p></div>
+<div class="c w1"><span class="q">When</span><h3>什麼時候</h3><p>2026/12/21 開課，2027/05/10 結訓。每週一、三、五晚間 18:40–21:40，國定假日停課。</p></div>
+<div class="c w1"><span class="q">Where</span><h3>在哪裡上課</h3><p>雲端線上教室，在家就能上。由聯成電腦新竹認證中心開設，對接竹科設備產業。</p></div>
+<div class="c w1"><span class="q">How</span><h3>怎麼學</h3><p>每堂都有實作產出，一步步累積成個人作品集；搭配影音補課與 AI 隨身教練，跟不上也有退路。</p></div>
+</div></section>
+
+<section id="why">
+<div class="hd"><span class="bar"></span><h2>產業正在搶人，進場正是時候</h2><p>3D 機構設計已是設備產業的基本門票。</p></div>
+<div class="grid g3">
+<div class="c stat"><span class="num">+44.75%</span><h3>半導體設備出口年增率</h3><p>2026 年 1–5 月出口 28.57 億美元，機械產業中成長最快。</p><small>來源：台灣區機器同業公會，2026/07</small></div>
+<div class="c stat"><span class="num">4.7 萬</span><h3>半導體業每月徵才人數</h3><p>年增超過 2 成；作業／技術／維修類 6 成「科系不拘」。</p><small>來源：104《2026 半導體產業人才報告》，2026/09</small></div>
+<div class="c stat"><span class="num">12.5</span><h3>營建・製圖類求供比</h3><p>每位求職者平均可選 12.5 個工作機會。</p><small>來源：聯合新聞網報導，2026/09</small></div>
+</div>
+<div class="band">大新竹及竹科周邊：<b>指定 Inventor 120–180 個職缺</b>，廣義機構／設備繪圖類 <b>800–1,200 個職缺</b>（本中心研析，2026 年 10 月；數量隨市場變動）</div>
+</section>
+
+<section id="how">
+<div class="hd"><span class="bar"></span><h2>3 階段循序漸進，每一堂都有作品產出</h2><p>不用先會畫圖。從介面與座標開始，到能交出 Inventor 工程圖，展開看每階段學什麼。</p></div>
+<details open><summary>階段 1｜AutoCAD 2D 精密圖學</summary><div class="stage"><div class="st-h"><span class="num">72H</span><span>第 01–24 堂</span></div><ul><li>三視圖與投影、CNS 製圖規範</li><li>尺寸標註、表面加工符號</li><li>圖層、樣板與配置出圖</li><li>平面／立面／大樣圖實務、綜合專案</li><li>圖面檢查與除錯</li></ul></div></details>
+<details><summary>階段 2｜AutoCAD 3D 實體建模</summary><div class="stage"><div class="st-h"><span class="num">36H</span><span>第 25–36 堂</span></div><ul><li>3D 座標系統（UCS）、擠出／迴轉／掃掠建模</li><li>布林運算、邊緣編輯、剖切與干涉檢查</li><li>Flatshot：3D 模型轉 2D 平面視圖</li><li>基礎彩現與 3D 零件實務演練</li></ul></div></details>
+<details><summary>階段 3｜Inventor 參數化設計與工程圖</summary><div class="stage"><div class="st-h"><span class="num">36H</span><span>第 37–48 堂</span></div><ul><li>參數化草繪與拘束條件</li><li>孔、螺紋、陣列與鏡射特徵</li><li>基準、投影、剖面視圖與詳圖</li><li>工程圖 (*.idw) 完稿與作品集產出</li></ul></div></details>
+<details><summary>最後衝刺｜AutoCAD 證照輔考</summary><div class="stage"><div class="st-h"><span class="num">9H</span><span>第 49–51 堂</span></div><ul><li>考試範圍解析與題型演練</li><li>實作題演練、模擬測驗與弱點檢討</li></ul></div></details>
+<div class="grid g3" style="margin-top:16px">
+<div class="c"><h3 class="sub">業界圖面即教材</h3><p>以真實機械零件與組立圖為範例，學完即可上線。</p></div>
+<div class="c"><h3 class="sub">三年內重複學習</h3><p>沒跟上的單元可以再上一次（以報名時之學籍規定為準）。</p></div>
+<div class="c"><h3 class="sub">影音補課＋AI 教練</h3><p>影音教材隨時複習，AI 教練 24 小時解惑，複雜問題轉真人協助。</p></div>
+</div></section>
+
+<section id="job">
+<div class="hd"><span class="bar"></span><h2>結訓後，能接軌這 4 類職務</h2><p>課程單元直接對應企業職缺的工具與技能要求。</p></div>
+<div class="grid g4 jobs">
+<div class="c"><b>機構設計類</b><p>機械／機構設計工程師：3D 建模、拆圖、干涉檢討</p><small>對應 Inventor 第 37–48 堂、AutoCAD 3D 第 25–36 堂</small></div>
+<div class="c"><b>設備／治具類</b><p>設備繪圖、治具設計工程師：晶圓／封測治具、自動化機台</p><small>對應布林運算、剖切干涉、Inventor 孔與螺紋</small></div>
+<div class="c"><b>CAD/CAM 類</b><p>CAD/CAM 工程師、電腦繪圖人員：3D 轉 2D 加工圖、BOM 整合</p><small>對應 Flatshot、標準零件查詢、工程圖完稿</small></div>
+<div class="c"><b>廠務工程類</b><p>工程配管繪圖員、廠務 3D 繪圖工程師：潔淨室管道配置</p><small>對應平面／立面／大樣圖、配置出圖</small></div>
+</div></section>
+
+<section id="trust">
+<div class="hd"><span class="bar"></span><h2>實力不是自己說了算</h2><p>政府認證的訓練機構開設，訓練品質與就業服務雙重把關。</p></div>
+<div class="grid g3">
+<div class="c"><h3>TTQS 國家級認證</h3><p>勞動部人才發展品質管理系統認證，課程規劃與執行經嚴格審核。</p></div>
+<div class="c"><h3>113 年度評鑑 A 級</h3><p>私立就業服務機構評鑑 A 級，肯定訓練品質與就業成效。</p></div>
+<div class="c"><h3>JOB580 AI 就業平台</h3><p>AI 分析你的技能與職缺需求，結訓後持續精準推薦，並提供履歷優化與面試模擬。</p></div>
+</div>
+<div class="c" style="margin-top:16px"><h3>講師｜Conny 老師，資深 CAD／3D 建模講師</h3><p>曾任建模師，現任明新科技大學電腦輔助製圖兼任講師，並擔任新竹縣專業職能培訓人員指定講師、聯成電腦公訓課程講師等。</p></div>
+</section>
+
+<section id="info">
+<div class="hd"><span class="bar"></span><h2>從開班到面試的關鍵時間點</h2><p>實際日期以最終公告為準。</p></div>
+<div class="tl">
+<div><span class="num">2026/12/21</span><b>開班</b><span>2D 製圖起</span></div>
+<div><span class="num">2027/03/08</span><b>AutoCAD 3D</b><span>第 25 堂起</span></div>
+<div><span class="num">2027/04/07</span><b>Inventor</b><span>第 37 堂起</span></div>
+<div><span class="num">2027/05/10</span><b>證照輔考・結訓</b><span>第 49–51 堂</span></div>
+<div><span class="num">2027/05/19</span><b>履歷健診</b><span>面試技巧指導</span></div>
+<div><span class="num">2027/05/26</span><b>徵才媒合</b><span>企業現場面試</span></div>
+</div></section>
+
+<section id="enroll" style="padding-bottom:20px">
+<div class="cta-box">
+<div><h2>今天預約，下一個進入工業大廠的機構工程師就是你</h2><p>名額開放報名中。留下聯絡方式，由課程顧問說明課程細節、上課方式與徵才媒合流程。</p>
+<a class="btn p" href="#" id="cta-link">我要預約課程諮詢</a></div>
+<div class="info"><div><span>課程</span><b>AutoCAD 與 Inventor 參數化建模暨自動化機構設計班</b></div><div><span>日期</span><b>2026/12/21–2027/05/10</b></div><div><span>時段</span><b>週一、三、五 18:40–21:40</b></div><div><span>地點</span><b>雲端線上教室</b></div><div><span>時數</span><b>51 堂／153 小時</b></div></div>
+</div></section>
+</main>
+<footer><div class="w">聯成電腦 新竹認證中心｜iCAP 設計產業工業設計師（AVA2173-003v5）職能對應。職缺數據為本中心大新竹及竹科周邊職缺研析（2026 年 10 月），其他數據來源已於各區塊標示；職缺為就業市場資訊，實際徵才以媒合當日公告為準，學員權益以報名時之學籍規定為準。</div></footer>
+</body>
+</html>
